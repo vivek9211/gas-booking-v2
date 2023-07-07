@@ -1,0 +1,80 @@
+<%- include("partials/loginheader") -%>
+
+
+
+<div id="booking" class="section">
+       <div class="section-center">
+         <div class="container">
+           <div class="row">
+             <div class="booking-form">
+               <div class="form-header">
+                 <h1>Make your reservation</h1>
+               </div>
+               <form action="/logauth/users/booking" method="POST">
+                 <div class="form-group">
+                   <input name="address" class="form-control" type="text" placeholder="Country, ZIP, city...">
+                 <span class="form-label">Destination</span>
+                </div>
+                 <div class="row">
+                   <div class="row">
+                     <div class="col-md-6">
+                       <div class="form-group">
+                         <input name="gasid" class="form-control" type="number" placeholder="Enter your Gas ID">
+                         <span class="form-label">Gas ID</span>
+                       </div>
+                     </div>
+                     <div class="col-md-6">
+                       <div class="form-group">
+                         <input name="date" class="form-control" type="date" required>
+                         <span class="form-label">Delivery Date</span>
+                       </div>
+                     </div>
+                   </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <select name="capacity" class="form-control" required>
+                          <option value="" selected hidden>Cylinder Capacity</option>
+                          <option>5</option>
+                          <option>15</option>
+                        </select>
+                        <span class="select-arrow"></span>
+                        <span class="form-label">Rooms</span>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input class="form-control" type="number" placeholder="Current Price">
+                        <span class="form-label">Price</span>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input name="email" class="form-control" type="email" value="<%=email%>" readonly="readonly">
+                        <span class="form-label">Email</span>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input name="mno" class="form-control" type="tel" placeholder="Enter you Phone">
+                        <span class="form-label">Phone</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-btn">
+                    <button class="submit-btn" type="submit">Book Now</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+<%- include("partials/footer") -%>

@@ -1,0 +1,61 @@
+<%- include("partials/loginheader") -%>
+
+
+<div class="container mt-5">
+
+    <div class="row d-flex justify-content-center">
+
+        <div class="col-md-7">
+
+            <div class="card p-3 py-4">
+
+                <div class="text-center">
+                    <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png" width="100" class="rounded-circle">
+                </div>
+
+                <div class="text-center mt-3">
+                    <span class="bg-secondary p-1 px-4 rounded text-white"> <%=name%> </span>
+                    <h5 class="mt-2 mb-0"> <%=email%> </h5>
+                    <span>UserType - Customer</span>
+
+                    <div class="px-4 mt-1">
+                        <ul>
+                          <li id="info"><b>Address</b> : <%=address%> </li>
+                          <li id="info"><b>Phone No.</b> : <%=mno%></li>
+                          <li id="info"><b>Area Code</b> : <%=pincode%> </li>
+                        </ul>
+
+                    </div>
+
+                     <ul class="social-list">
+                        <li><i class="fa fa-facebook"></i></li>
+                        <li><i class="fa fa-instagram"></i></li>
+                        <li><i class="fa fa-linkedin"></i></li>
+                        <li><i class="fa fa-google"></i></li>
+                    </ul>
+
+                    <div class="buttons">
+                      <form class="" action="" method="get">
+                        <a href="/logauth/login/update?email=<%=email%>&name=<%=name%>" class="buttonUpdate">Update</a>
+                        <!-- <button type="submit" id="book" class="btn btn-outline-primary px-4">Update</button> -->
+                        <a href="/logauth/users/booking?email=<%=email%>&name=<%=name%>" class="buttonBook">Book Gas</a>
+                        <!-- <button type="submit" id="book" class="btn btn-primary px-4 ms-3">Book Gas</button> -->
+                        <a href="/logauth/users/myorder?email=<%=email%>&name=<%=name%>" class="buttonBook">My Order</a>
+                      </form>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><br><br>
+
+
+
+
+<%- include("partials/footer") -%>

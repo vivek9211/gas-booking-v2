@@ -1,0 +1,58 @@
+<%- include("partials/loginheader") -%>
+
+
+<div class="container mt-5">
+
+    <div class="row d-flex justify-content-center">
+
+        <div class="col-md-7">
+
+            <div class="card p-3 py-4">
+
+                <div class="text-center">
+                    <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png" width="100" class="rounded-circle">
+                </div>
+
+                <div class="text-center mt-3">
+                    <!-- <span class="bg-secondary p-1 px-4 rounded text-white"> name </span> -->
+                    <!-- <h5 class="mt-2 mb-0"> email </h5> -->
+                    <span>UserType - Customer</span>
+
+                    <div class="px-4 mt-1 buttons">
+                      <form class="" action="/logauth/login/update" method="post">
+                        <span class="bg-secondary p-1 px-4 rounded text-white"> <%=name%> </span><br>
+                        <label for=""><b>Email : <%=email%> </b></label><br>
+                        <input type="hidden" name="email" value= <%=email%> >
+                        <label for="">Enter Your Address : </label><br>
+                        <input type="text" name="address" value=""><br><br>
+                        <label for="">Enter Your Phone No : </label><br>
+                        <input type="number" name="mno" value=""><br><br>
+                        <label for="">Enter Your Area Pincode : </label><br>
+                        <input type="number" name="pincode" value=""><br><br>
+                        <button type="submit" class="btn btn-outline-primary px-4">Update</button>
+                      </form>
+                    </div>
+                    <br>
+
+                     <ul class="social-list">
+                        <li><i class="fa fa-facebook"></i></li>
+                        <li><i class="fa fa-instagram"></i></li>
+                        <li><i class="fa fa-linkedin"></i></li>
+                        <li><i class="fa fa-google"></i></li>
+                    </ul>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<% if(typeof message != "undefined" && message) {%>
+  <h4 class="alert alert-danger mt-4"> <%=message%> </h4>
+<% } %>
+<br><br>
+
+
+
+<%- include("partials/footer") -%>
